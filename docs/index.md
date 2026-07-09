@@ -35,6 +35,7 @@ The artifacts showed that the change worked and showed the change in result.
 
 This change was fairly easy, as I had examples of how to create new features and the table just needed some editing.
 
+The table shows that there are more females in the small category of flipper length but there are more males in the categories of medium and large flipper lengths. This shows that while overall there are more medium penguins than large or small penguins, there are more small female penguins and more large male penguins. This suggests that the generalizations that the male species is larger is generally true for penguins as well.
 
 
 ## Phase 5. Custom Project
