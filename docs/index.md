@@ -1,7 +1,6 @@
 # Project Documentation
 
 This site provides project documentation.
-Use the documentation navigation to explore.
 
 ## How-To Guide
 
@@ -23,17 +22,20 @@ to get the example projects running on your machine.
 
 Describe your small technical modification to the example project.
 
-Include:
+I added two technical modifications.
+First, I created a feature called sex_binary so that the penguin's gender had a value of either 0 or 1, where 0 = male and 1 = female. This way the gender of the penguin was a numerical value that could be used in calculations.
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+Secondly, I changed the table so that it broke down the number of penguin's in each category of flipper length by gender. I did this because in some species the male generally has a larger body than females. I was interested in whether or not that was true for penguins and decided to separate flipper lengths by gender as well.
 
-Compared with the example project,
-explain what is different and why the change matters.
+The artifacts showed that the change worked and showed the change in result.
 
-Was it easy, or surprisingly challenging and why do you think so?
+![Artifact showing newly created feature ](./docs/images/penguins_03.png)
+
+![Penguins sorted by gender when categorized by flipper length in millimeters ](./docs/images/penguins_02.png)
+
+This change was fairly easy, as I had examples of how to create new features and the table just needed some editing.
+
+
 
 ## Phase 5. Custom Project
 
