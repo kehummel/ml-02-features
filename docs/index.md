@@ -29,9 +29,9 @@ Secondly, I changed the table so that it broke down the number of penguin's in e
 
 The artifacts showed that the change worked and showed the change in result.
 
-![Artifact showing newly created feature ](./docs/images/penguins_03.png)
+![Artifact showing newly created feature ](./images/penguins_03.png)
 
-![Penguins sorted by gender when categorized by flipper length in millimeters ](./docs/images/penguins_02.png)
+![Penguins sorted by gender when categorized by flipper length in millimeters ](./images/penguins_02.png)
 
 This change was fairly easy, as I had examples of how to create new features and the table just needed some editing.
 
