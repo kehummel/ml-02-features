@@ -40,69 +40,47 @@ The table shows that there are more females in the small category of flipper len
 
 ## Phase 5. Custom Project
 
-Describe your custom project and how you made your modeling decisions.
-
-Be specific about what changed from the example project.
+For phase 5 I followed the Project 2 Instructions as outlined on Canvas. We cleaned our data, did some feature engineering, and then did two versions of split/text/train for our data.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+The dataset is information based on the passengers on the Titanic. It gives information on their gender, age, who they were traveling with, their class and ticket price, and whether or not they survived.
 
-Include:
-
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+This data set is a part of the seaborn library.
 
 ### Modeling Approach
 
-Describe the problem type and modeling approach for this project.
-
-Include:
-
-- Is this supervised or unsupervised and how do you know
-- Is this classification, regression, clustering, recommendation, forecasting, or another type of ML task
-- What kind of target works well for this approach
-- Why your selected model or method is appropriate
+- This is a supervised learning as we already know whether or not each passenger survived.
+- It is a classification ML task as we are trying to see which passengers fit into the category of "survived"
+- Classification ML is best for binary groups, "yes" or "no" results typically.
+- Classification is the correct choice because in our "survived" feature there are only two possible outcomes; either yes they survived or not they did not survive. This means we have a binary feature which makes classification the best choice.
 
 ### Target
 
-Describe the example target variable.
-
-Then describe your chosen target variable.
-
-Explain how your target choice changes the modeling approach, interpretation, or evaluation.
+The target is survived. We want to see what factors increased passenger's chances of surviving the sinking of the Titanic.
 
 ### Features
 
-Describe the example features.
+We cleaned the data by filling in the missing data for the 'age' and 'embarked' features. For age, we replaced missing data with the median age value. For embarked we replaced the missing data with the most popular embarked town which was Southampton.
 
-Then describe the features you used to predict your target.
+We created a new feature called 'family_size' where we told how large of a family each passenger was a part of. We did this by adding the sibsp feature, parch feature, and 1. 1 was for the individual passenger, sibsp states the number of siblings or spouses a passenger had, and parch states the number of parents or children a passenger had. This sum gave us the size of the passenger's family.
 
-Explain what you changed, added, removed, or kept and why.
+We picked the following features to predict survival: age, fare, pclass, sex, and family size. These were features that helped decide where a person would be on the boat (fare, pclass, family size) along with their physical ability to survive the sinking (age and gender).
 
 ### Evaluation and Results
 
-Describe how you evaluated your model.
+We complete two split/test/train models. One as a basic example and another that was stratified for survival. In both instances the train size was 712 and the test size was 179.
 
-Include:
+We then looked at pclass instances to see if our train/test groups stayed equivalent for those features as well. The pclass number of instances between the train/test groups were more similar to the original data than the stratified train/test groups.
 
-- The metric or evidence you used
-- The main result
-- Whether the result was useful, interesting, surprising, or disappointing
-- Any weakness, limitation, or next improvement
+This shows that just because you stratified your data for one feature does not mean it will be stratified for all of the other features. In fact, stratifying for one feature can decrease the similarities to the original data for other features.
 
 ### Summary
 
-Summarize your custom project.
+In this project we focused on cleaning data, creating feature, and running two types of train/test models.
 
-Include:
+We learned that stratifying for one feature so that is more closely resembles the population can decrease another features resemblance to the population.
 
-- How you implemented your custom model
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
+![pclass percentage for base train/test split ](./images/Basic_split_pclass.png)
 
-Display at least one image or screenshot showing your work.
+![pclass percentages for stratified model](./images/stratified_split_plcass.png)

@@ -50,18 +50,17 @@ to complete:
 5. Phase 5. **Apply**
 
 
-# Phase 4 - Technical Modification
+## Phase 4 - Technical Modification
 
-# the modified example notebook
-- [ml_02_hummel.ipynb](notebooks/ml_02_hummel.ipynb)
+the modified example notebook
+[ml_02_hummel.ipynb](notebooks/ml_02_hummel.ipynb)
 
-## Findings and Visuals
+## Phase 5 - Apply to new skill
 
-![Number of penguins when categorized by flipper length in millimeters](./docs/images/penguins_01.png)
+Project notebook
+[ml_02_project_hummel.ipynb](notebooks/ml_02_project_hummel.ipynb)
 
-![Penguins sorted by gender when categorized by flipper length in millimeters ](./docs/images/penguins_02.png)
-
-## Project Documentation
+## Project Documentation - For Phases 4 & 5
 
 Additional project instructions, terms, and notes:
 
