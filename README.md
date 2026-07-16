@@ -53,12 +53,12 @@ to complete:
 ## Phase 4 - Technical Modification
 
 the modified example notebook
-[ml_02_hummel.ipynb](notebooks/ml_02_hummel.ipynb)
+[ml_02_hummel.ipynb](.notebooks/ml_02_hummel.ipynb)
 
 ## Phase 5 - Apply to new skill
 
 Project notebook
-[ml_02_project_hummel.ipynb](notebooks/ml_02_project_hummel.ipynb)
+[ml_02_project_hummel.ipynb](.notebooks/ml_02_project_hummel.ipynb)
 
 ## Project Documentation - For Phases 4 & 5
 
