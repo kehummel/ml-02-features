@@ -81,6 +81,8 @@ In this project we focused on cleaning data, creating feature, and running two t
 
 We learned that stratifying for one feature so that is more closely resembles the population can decrease another features resemblance to the population.
 
+pclass percentages for our basic model
 ![pclass percentage for base train/test split ](./images/Basic_split_pclass.png)
 
+pclass percentages for our stratified model
 ![pclass percentages for stratified model](./images/stratified_split_plcass.png)
