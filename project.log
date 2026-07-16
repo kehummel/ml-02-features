@@ -365,3 +365,1192 @@ max         59.600000      21.500000         231.000000  6300.000000
 2026-07-09 14:02:18 | INFO | M02 | After features:   10
 2026-07-09 14:02:18 | INFO | M02 | Intended target:  body_mass_g
 2026-07-09 14:02:18 | INFO | M02 | ========================
+2026-07-09 14:31:47 | INFO | M01 | === RUN START ===
+2026-07-09 14:31:47 | INFO | M01 | project=M01
+2026-07-09 14:31:47 | INFO | M01 | repo_dir=ml-02-features
+2026-07-09 14:31:47 | INFO | M01 | python=3.14.3
+2026-07-09 14:31:47 | INFO | M01 | os=Windows 11
+2026-07-09 14:31:47 | INFO | M01 | shell=powershell
+2026-07-09 14:31:47 | INFO | M01 | cwd=notebooks
+2026-07-09 14:31:47 | INFO | M01 | github_actions=False
+2026-07-09 14:31:47 | INFO | M01 | Confirming installation:
+2026-07-09 14:31:47 | INFO | M01 |   python:       3.14.3
+2026-07-09 14:31:47 | INFO | M01 |   pandas:       3.0.3
+2026-07-09 14:31:47 | INFO | M01 |   numpy:        2.5.1
+2026-07-09 14:31:47 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-09 14:31:47 | INFO | M01 |   seaborn:      0.13.2
+2026-07-09 14:31:47 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-09 14:31:47 | INFO | M01 | Built-in Seaborn datasets: ['anagrams', 'anscombe', 'attention', 'brain_networks', 'car_crashes', 'diamonds', 'dots', 'dowjones', 'exercise', 'flights', 'fmri', 'geyser', 'glue', 'healthexp', 'iris', 'mpg', 'penguins', 'planets', 'seaice', 'taxis', 'tips', 'titanic']
+2026-07-09 14:31:47 | INFO | M01 | Loading dataset: titanic
+2026-07-09 14:31:47 | INFO | M01 | Loaded: 891 rows (instances), 15 columns
+2026-07-09 14:31:47 | INFO | M01 | Instances (rows): 891
+2026-07-09 14:31:47 | INFO | M01 | Columns:          15
+2026-07-09 14:31:47 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-09 14:31:47 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:31:47 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-09 14:31:47 | INFO | M01 | Missing values across all columns: 869
+2026-07-09 14:31:47 | DEBUG | M01 | First rows:
+2026-07-09 14:31:47 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-09 14:31:47 | INFO | M01 | Chosen target (y): survived
+2026-07-09 14:31:47 | INFO | M01 | Target is numeric? True
+2026-07-09 14:31:47 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-09 14:31:47 | INFO | M01 | Candidate features (X): ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:31:47 | INFO | M01 | ========================
+2026-07-09 14:31:47 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-09 14:31:47 | INFO | M01 | ========================
+2026-07-09 14:31:47 | INFO | M01 | Dataset:           titanic
+2026-07-09 14:31:47 | INFO | M01 | Instances:         891
+2026-07-09 14:31:47 | INFO | M01 | Candidate target:  survived
+2026-07-09 14:31:47 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-09 14:31:47 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:31:47 | INFO | M01 | ========================
+2026-07-09 14:32:45 | INFO | M01 | === RUN START ===
+2026-07-09 14:32:45 | INFO | M01 | project=M01
+2026-07-09 14:32:45 | INFO | M01 | repo_dir=ml-02-features
+2026-07-09 14:32:45 | INFO | M01 | python=3.14.3
+2026-07-09 14:32:45 | INFO | M01 | os=Windows 11
+2026-07-09 14:32:45 | INFO | M01 | shell=powershell
+2026-07-09 14:32:45 | INFO | M01 | cwd=notebooks
+2026-07-09 14:32:45 | INFO | M01 | github_actions=False
+2026-07-09 14:32:45 | INFO | M01 | Confirming installation:
+2026-07-09 14:32:45 | INFO | M01 |   python:       3.14.3
+2026-07-09 14:32:45 | INFO | M01 |   pandas:       3.0.3
+2026-07-09 14:32:45 | INFO | M01 |   numpy:        2.5.1
+2026-07-09 14:32:45 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-09 14:32:45 | INFO | M01 |   seaborn:      0.13.2
+2026-07-09 14:32:45 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-09 14:32:45 | INFO | M01 | Loading dataset: titanic
+2026-07-09 14:32:45 | INFO | M01 | Loaded: 891 rows (instances), 15 columns
+2026-07-09 14:32:45 | INFO | M01 | Instances (rows): 891
+2026-07-09 14:32:45 | INFO | M01 | Columns:          15
+2026-07-09 14:32:45 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-09 14:32:45 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:32:45 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-09 14:32:45 | INFO | M01 | Missing values across all columns: 869
+2026-07-09 14:32:45 | DEBUG | M01 | First rows:
+2026-07-09 14:32:45 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-09 14:32:45 | INFO | M01 | Chosen target (y): survived
+2026-07-09 14:32:45 | INFO | M01 | Target is numeric? True
+2026-07-09 14:32:45 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-09 14:32:45 | INFO | M01 | Candidate features (X): ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:32:46 | INFO | M01 | ========================
+2026-07-09 14:32:46 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-09 14:32:46 | INFO | M01 | ========================
+2026-07-09 14:32:46 | INFO | M01 | Dataset:           titanic
+2026-07-09 14:32:46 | INFO | M01 | Instances:         891
+2026-07-09 14:32:46 | INFO | M01 | Candidate target:  survived
+2026-07-09 14:32:46 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-09 14:32:46 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:32:46 | INFO | M01 | ========================
+2026-07-09 14:33:23 | INFO | M01 | === RUN START ===
+2026-07-09 14:33:23 | INFO | M01 | project=M01
+2026-07-09 14:33:23 | INFO | M01 | repo_dir=ml-02-features
+2026-07-09 14:33:23 | INFO | M01 | python=3.14.3
+2026-07-09 14:33:23 | INFO | M01 | os=Windows 11
+2026-07-09 14:33:23 | INFO | M01 | shell=powershell
+2026-07-09 14:33:23 | INFO | M01 | cwd=notebooks
+2026-07-09 14:33:23 | INFO | M01 | github_actions=False
+2026-07-09 14:33:23 | INFO | M01 | Confirming installation:
+2026-07-09 14:33:23 | INFO | M01 |   python:       3.14.3
+2026-07-09 14:33:23 | INFO | M01 |   pandas:       3.0.3
+2026-07-09 14:33:23 | INFO | M01 |   numpy:        2.5.1
+2026-07-09 14:33:23 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-09 14:33:23 | INFO | M01 |   seaborn:      0.13.2
+2026-07-09 14:33:23 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-09 14:33:23 | INFO | M01 | Loading dataset: titanic
+2026-07-09 14:33:23 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-09 14:33:23 | INFO | M01 | Instances (rows): 891
+2026-07-09 14:33:23 | INFO | M01 | Columns:          15
+2026-07-09 14:33:23 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-09 14:33:23 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:33:23 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-09 14:33:23 | INFO | M01 | Missing values across all columns: 869
+2026-07-09 14:33:23 | DEBUG | M01 | First rows:
+2026-07-09 14:33:23 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-09 14:33:23 | INFO | M01 | Chosen target (y): survived
+2026-07-09 14:33:23 | INFO | M01 | Target is numeric? True
+2026-07-09 14:33:23 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-09 14:33:23 | INFO | M01 | Candidate features (X): ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:33:23 | INFO | M01 | ========================
+2026-07-09 14:33:23 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-09 14:33:23 | INFO | M01 | ========================
+2026-07-09 14:33:23 | INFO | M01 | Dataset:           titanic
+2026-07-09 14:33:23 | INFO | M01 | Instances:         891
+2026-07-09 14:33:23 | INFO | M01 | Candidate target:  survived
+2026-07-09 14:33:23 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-09 14:33:23 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:33:23 | INFO | M01 | ========================
+2026-07-09 14:37:49 | INFO | M01 | === RUN START ===
+2026-07-09 14:37:49 | INFO | M01 | project=M01
+2026-07-09 14:37:49 | INFO | M01 | repo_dir=ml-02-features
+2026-07-09 14:37:49 | INFO | M01 | python=3.14.3
+2026-07-09 14:37:49 | INFO | M01 | os=Windows 11
+2026-07-09 14:37:49 | INFO | M01 | shell=powershell
+2026-07-09 14:37:49 | INFO | M01 | cwd=notebooks
+2026-07-09 14:37:49 | INFO | M01 | github_actions=False
+2026-07-09 14:37:49 | INFO | M01 | Confirming installation:
+2026-07-09 14:37:49 | INFO | M01 |   python:       3.14.3
+2026-07-09 14:37:49 | INFO | M01 |   pandas:       3.0.3
+2026-07-09 14:37:49 | INFO | M01 |   numpy:        2.5.1
+2026-07-09 14:37:49 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-09 14:37:49 | INFO | M01 |   seaborn:      0.13.2
+2026-07-09 14:37:49 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-09 14:37:49 | INFO | M01 | Loading dataset: titanic
+2026-07-09 14:37:49 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-09 14:37:49 | INFO | M01 | Instances (rows): 891
+2026-07-09 14:37:49 | INFO | M01 | Columns:          15
+2026-07-09 14:37:49 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-09 14:37:49 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:37:49 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-09 14:37:49 | INFO | M01 | Missing values across all columns: 869
+2026-07-09 14:37:49 | DEBUG | M01 | First rows:
+2026-07-09 14:37:49 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-09 14:37:49 | INFO | M01 | Chosen target (y): survived
+2026-07-09 14:37:49 | INFO | M01 | Target is numeric? True
+2026-07-09 14:37:49 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-09 14:37:49 | INFO | M01 | Candidate features (X): ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:37:49 | INFO | M01 | ========================
+2026-07-09 14:37:49 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-09 14:37:49 | INFO | M01 | ========================
+2026-07-09 14:37:49 | INFO | M01 | Dataset:           titanic
+2026-07-09 14:37:49 | INFO | M01 | Instances:         891
+2026-07-09 14:37:49 | INFO | M01 | Candidate target:  survived
+2026-07-09 14:37:49 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-09 14:37:49 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-09 14:37:49 | INFO | M01 | ========================
+2026-07-14 08:32:45 | INFO | M01 | Loading dataset: titanic
+2026-07-14 08:32:45 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 08:35:21 | INFO | M01 | Loading dataset: titanic
+2026-07-14 08:35:21 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 08:36:06 | INFO | M01 | Loading dataset: titanic
+2026-07-14 08:36:06 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 08:36:23 | INFO | M01 | Loading dataset: titanic
+2026-07-14 08:36:23 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 08:39:05 | INFO | M01 | === RUN START ===
+2026-07-14 08:39:05 | INFO | M01 | project=M01
+2026-07-14 08:39:05 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 08:39:05 | INFO | M01 | python=3.14.3
+2026-07-14 08:39:05 | INFO | M01 | os=Windows 11
+2026-07-14 08:39:05 | INFO | M01 | shell=powershell
+2026-07-14 08:39:05 | INFO | M01 | cwd=notebooks
+2026-07-14 08:39:05 | INFO | M01 | github_actions=False
+2026-07-14 08:39:05 | INFO | M01 | Confirming installation:
+2026-07-14 08:39:05 | INFO | M01 |   python:       3.14.3
+2026-07-14 08:39:05 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 08:39:05 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 08:39:05 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 08:39:05 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 08:39:05 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 08:39:05 | INFO | M01 | Loaded dataset titanic
+2026-07-14 08:39:43 | INFO | M01 | Loading dataset: titanic
+2026-07-14 08:39:43 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 08:43:04 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:43:04 | INFO | M01 | Columns:          15
+2026-07-14 08:43:04 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:43:04 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:43:04 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:43:04 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:43:04 | DEBUG | M01 | First rows:
+2026-07-14 08:43:04 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 08:44:26 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:44:26 | INFO | M01 | Features (columns):          15
+2026-07-14 08:44:26 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:44:26 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:44:26 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:44:26 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:44:26 | DEBUG | M01 | First rows:
+2026-07-14 08:44:26 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 08:44:35 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:44:35 | INFO | M01 | Features (columns): 15
+2026-07-14 08:44:35 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:44:35 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:44:35 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:44:35 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:44:35 | DEBUG | M01 | First rows:
+2026-07-14 08:44:35 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 08:47:00 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:47:00 | INFO | M01 | Features (columns): 15
+2026-07-14 08:47:00 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:47:00 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:47:00 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:47:00 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:47:00 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 08:49:32 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:49:32 | INFO | M01 | Features (columns): 15
+2026-07-14 08:49:32 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:49:32 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:49:32 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:49:32 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:49:32 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked   class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S   Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C   First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S   Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S   First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S   Third    man        True  NaN  Southampton    no   
+5         0       3    male   NaN      0      0   8.4583        Q   Third    man        True  NaN   Queenstown    no   
+6         0       1    male  54.0      0      0  51.8625        S   First    man        True    E  Southampton    no   
+7         0       3    male   2.0      3      1  21.0750        S   Third  child       False  NaN  Southampton    no   
+8         1       3  female  27.0      0      2  11.1333        S   Third  woman       False  NaN  Southampton   yes   
+9         1       2  female  14.0      1      0  30.0708        C  Second  child       False  NaN    Cherbourg   yes   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+5   True  
+6   True  
+7  False  
+8  False  
+9  False  
+2026-07-14 08:51:11 | INFO | M01 | Instances (rows): 891
+2026-07-14 08:51:11 | INFO | M01 | Features (columns): 15
+2026-07-14 08:51:11 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 08:51:11 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 08:51:11 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 08:51:11 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 08:51:11 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 09:19:18 | INFO | M01 | Chosen target (y): survived
+2026-07-14 09:19:18 | INFO | M01 | Target is numeric? True
+2026-07-14 09:19:18 | INFO | M01 | Implied problem type: regression (we want to predict a number)
+2026-07-14 09:19:18 | INFO | M01 | Candidate features (X): ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 09:19:18 | INFO | M01 | ========================
+2026-07-14 09:19:18 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-14 09:19:18 | INFO | M01 | ========================
+2026-07-14 09:19:18 | INFO | M01 | Dataset:           titanic
+2026-07-14 09:19:18 | INFO | M01 | Instances:         891
+2026-07-14 09:19:18 | INFO | M01 | Candidate target:  survived
+2026-07-14 09:19:18 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-14 09:19:18 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 09:19:18 | INFO | M01 | ========================
+2026-07-14 09:34:18 | INFO | M01 | === RUN START ===
+2026-07-14 09:34:18 | INFO | M01 | project=M01
+2026-07-14 09:34:18 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 09:34:18 | INFO | M01 | python=3.14.3
+2026-07-14 09:34:18 | INFO | M01 | os=Windows 11
+2026-07-14 09:34:18 | INFO | M01 | shell=powershell
+2026-07-14 09:34:18 | INFO | M01 | cwd=notebooks
+2026-07-14 09:34:18 | INFO | M01 | github_actions=False
+2026-07-14 09:34:18 | INFO | M01 | Confirming installation:
+2026-07-14 09:34:18 | INFO | M01 |   python:       3.14.3
+2026-07-14 09:34:18 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 09:34:18 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 09:34:18 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 09:34:18 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 09:34:18 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 09:34:18 | INFO | M01 | Loaded dataset titanic
+2026-07-14 09:35:16 | INFO | M01 | === RUN START ===
+2026-07-14 09:35:16 | INFO | M01 | project=M01
+2026-07-14 09:35:16 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 09:35:16 | INFO | M01 | python=3.14.3
+2026-07-14 09:35:16 | INFO | M01 | os=Windows 11
+2026-07-14 09:35:16 | INFO | M01 | shell=powershell
+2026-07-14 09:35:16 | INFO | M01 | cwd=notebooks
+2026-07-14 09:35:16 | INFO | M01 | github_actions=False
+2026-07-14 09:35:16 | INFO | M01 | Confirming installation:
+2026-07-14 09:35:16 | INFO | M01 |   python:       3.14.3
+2026-07-14 09:35:16 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 09:35:16 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 09:35:16 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 09:35:16 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 09:35:16 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 09:35:16 | INFO | M01 | Loaded dataset titanic
+2026-07-14 09:35:55 | INFO | M01 | === RUN START ===
+2026-07-14 09:35:55 | INFO | M01 | project=M01
+2026-07-14 09:35:55 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 09:35:55 | INFO | M01 | python=3.14.3
+2026-07-14 09:35:55 | INFO | M01 | os=Windows 11
+2026-07-14 09:35:55 | INFO | M01 | shell=powershell
+2026-07-14 09:35:55 | INFO | M01 | cwd=notebooks
+2026-07-14 09:35:55 | INFO | M01 | github_actions=False
+2026-07-14 09:35:55 | INFO | M01 | Confirming installation:
+2026-07-14 09:35:55 | INFO | M01 |   python:       3.14.3
+2026-07-14 09:35:55 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 09:35:55 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 09:35:55 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 09:35:55 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 09:35:55 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 09:35:55 | INFO | M01 | Loaded dataset titanic
+2026-07-14 09:35:55 | INFO | M01 | Loading dataset: titanic
+2026-07-14 09:35:55 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 09:35:56 | INFO | M01 | Instances (rows): 891
+2026-07-14 09:35:56 | INFO | M01 | Features (columns): 15
+2026-07-14 09:35:56 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 09:35:56 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 09:35:56 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 09:35:56 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 09:35:56 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 09:35:57 | INFO | M01 | ========================
+2026-07-14 09:35:57 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-14 09:35:57 | INFO | M01 | ========================
+2026-07-14 09:35:57 | INFO | M01 | Dataset:           titanic
+2026-07-14 09:35:57 | INFO | M01 | Instances:         891
+2026-07-14 09:35:57 | INFO | M01 | Candidate target:  survived
+2026-07-14 09:35:57 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-14 09:35:57 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 09:35:57 | INFO | M01 | ========================
+2026-07-14 10:04:56 | INFO | M01 | Median age substituted in for missing values
+2026-07-14 10:09:34 | INFO | M01 | Median age substituted in for missing values
+2026-07-14 10:13:08 | INFO | M01 | Missing values for town embarked from (embark_town feature) filled with most popular, Southampton
+2026-07-14 10:16:04 | INFO | M01 | Missing values for town embarked from but in 'embar' feature filled with most popular, S
+2026-07-14 10:16:39 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:23:03 | INFO | M01 | Median age substituted in for missing values
+2026-07-14 10:23:03 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:26:03 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-14 10:26:03 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:28:01 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-14 10:28:01 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:28:27 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:28:42 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:30:26 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:33:27 | INFO | M01 | === RUN START ===
+2026-07-14 10:33:27 | INFO | M01 | project=M01
+2026-07-14 10:33:27 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 10:33:27 | INFO | M01 | python=3.14.3
+2026-07-14 10:33:27 | INFO | M01 | os=Windows 11
+2026-07-14 10:33:27 | INFO | M01 | shell=powershell
+2026-07-14 10:33:27 | INFO | M01 | cwd=notebooks
+2026-07-14 10:33:27 | INFO | M01 | github_actions=False
+2026-07-14 10:33:27 | INFO | M01 | Confirming installation:
+2026-07-14 10:33:27 | INFO | M01 |   python:       3.14.3
+2026-07-14 10:33:27 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 10:33:27 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 10:33:27 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 10:33:27 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 10:33:27 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 10:33:27 | INFO | M01 | Loaded dataset titanic
+2026-07-14 10:33:27 | INFO | M01 | Loading dataset: titanic
+2026-07-14 10:33:27 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 10:33:27 | INFO | M01 | Instances (rows): 891
+2026-07-14 10:33:27 | INFO | M01 | Features (columns): 15
+2026-07-14 10:33:27 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 10:33:27 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 10:33:27 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:33:27 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 10:33:27 | DEBUG | M01 | 
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 10:33:29 | INFO | M01 | Median age substituted in for missing values
+2026-07-14 10:33:29 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:33:29 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-14 10:33:29 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:33:29 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-14 10:33:29 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:33:29 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:33:29 | INFO | M01 | ========================
+2026-07-14 10:33:29 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-14 10:33:29 | INFO | M01 | ========================
+2026-07-14 10:33:29 | INFO | M01 | Dataset:           titanic
+2026-07-14 10:33:29 | INFO | M01 | Instances:         891
+2026-07-14 10:33:29 | INFO | M01 | Candidate target:  survived
+2026-07-14 10:33:29 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-14 10:33:29 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 10:33:29 | INFO | M01 | ========================
+2026-07-14 10:38:46 | INFO | M01 | Loading dataset: titanic
+2026-07-14 10:38:46 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 10:42:53 | INFO | M01 | === RUN START ===
+2026-07-14 10:42:53 | INFO | M01 | project=M01
+2026-07-14 10:42:53 | INFO | M01 | repo_dir=ml-02-features
+2026-07-14 10:42:53 | INFO | M01 | python=3.14.3
+2026-07-14 10:42:53 | INFO | M01 | os=Windows 11
+2026-07-14 10:42:53 | INFO | M01 | shell=powershell
+2026-07-14 10:42:53 | INFO | M01 | cwd=notebooks
+2026-07-14 10:42:53 | INFO | M01 | github_actions=False
+2026-07-14 10:42:53 | INFO | M01 | Confirming installation:
+2026-07-14 10:42:53 | INFO | M01 |   python:       3.14.3
+2026-07-14 10:42:53 | INFO | M01 |   pandas:       3.0.3
+2026-07-14 10:42:53 | INFO | M01 |   numpy:        2.5.1
+2026-07-14 10:42:53 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-14 10:42:53 | INFO | M01 |   seaborn:      0.13.2
+2026-07-14 10:42:53 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-14 10:42:53 | INFO | M01 | Loaded dataset titanic
+2026-07-14 10:42:53 | INFO | M01 | Loading dataset: titanic
+2026-07-14 10:42:53 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-14 10:42:53 | INFO | M01 | Instances (rows): 891
+2026-07-14 10:42:53 | INFO | M01 | Features (columns): 15
+2026-07-14 10:42:53 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-14 10:42:53 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 10:42:53 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:42:53 | INFO | M01 | Missing values across all columns: 869
+2026-07-14 10:42:53 | DEBUG | M01 |    survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-14 10:42:55 | INFO | M01 | Median age substituted in for missing values
+2026-07-14 10:42:55 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:42:55 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-14 10:42:55 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:42:55 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-14 10:42:55 | INFO | M01 | Number of missing values in column:0
+2026-07-14 10:42:55 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age              0
+sibsp            0
+parch            0
+fare             0
+embarked         0
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      0
+alive            0
+alone            0
+dtype: int64
+2026-07-14 10:42:55 | INFO | M01 | ========================
+2026-07-14 10:42:55 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-14 10:42:55 | INFO | M01 | ========================
+2026-07-14 10:42:55 | INFO | M01 | Dataset:           titanic
+2026-07-14 10:42:55 | INFO | M01 | Instances:         891
+2026-07-14 10:42:55 | INFO | M01 | Candidate target:  survived
+2026-07-14 10:42:55 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-14 10:42:55 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-14 10:42:55 | INFO | M01 | ========================
+2026-07-16 09:26:50 | INFO | M01 | === RUN START ===
+2026-07-16 09:26:50 | INFO | M01 | project=M01
+2026-07-16 09:26:50 | INFO | M01 | repo_dir=ml-02-features
+2026-07-16 09:26:50 | INFO | M01 | python=3.14.3
+2026-07-16 09:26:50 | INFO | M01 | os=Windows 11
+2026-07-16 09:26:50 | INFO | M01 | shell=powershell
+2026-07-16 09:26:50 | INFO | M01 | cwd=notebooks
+2026-07-16 09:26:50 | INFO | M01 | github_actions=False
+2026-07-16 09:26:50 | INFO | M01 | Confirming installation:
+2026-07-16 09:26:50 | INFO | M01 |   python:       3.14.3
+2026-07-16 09:26:50 | INFO | M01 |   pandas:       3.0.3
+2026-07-16 09:26:50 | INFO | M01 |   numpy:        2.5.1
+2026-07-16 09:26:50 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-16 09:26:50 | INFO | M01 |   seaborn:      0.13.2
+2026-07-16 09:26:50 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-16 09:26:50 | INFO | M01 | Loaded dataset titanic
+2026-07-16 09:26:50 | INFO | M01 | Loading dataset: titanic
+2026-07-16 09:26:50 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-16 09:26:50 | INFO | M01 | Instances (rows): 891
+2026-07-16 09:26:50 | INFO | M01 | Features (columns): 15
+2026-07-16 09:26:50 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-16 09:26:50 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:26:50 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-16 09:26:50 | INFO | M01 | Missing values across all columns: 869
+2026-07-16 09:26:50 | DEBUG | M01 |    survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-16 09:26:52 | INFO | M01 | Median age substituted in for missing values
+2026-07-16 09:26:52 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:26:52 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-16 09:26:52 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:26:52 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-16 09:26:52 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:26:52 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age              0
+sibsp            0
+parch            0
+fare             0
+embarked         0
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      0
+alive            0
+alone            0
+dtype: int64
+2026-07-16 09:26:52 | INFO | M01 | ========================
+2026-07-16 09:26:52 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 09:26:52 | INFO | M01 | ========================
+2026-07-16 09:26:52 | INFO | M01 | Dataset:           titanic
+2026-07-16 09:26:52 | INFO | M01 | Instances:         891
+2026-07-16 09:26:52 | INFO | M01 | Candidate target:  survived
+2026-07-16 09:26:52 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 09:26:53 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:26:53 | INFO | M01 | ========================
+2026-07-16 09:39:14 | INFO | M01 | === RUN START ===
+2026-07-16 09:39:14 | INFO | M01 | project=M01
+2026-07-16 09:39:14 | INFO | M01 | repo_dir=ml-02-features
+2026-07-16 09:39:14 | INFO | M01 | python=3.14.3
+2026-07-16 09:39:14 | INFO | M01 | os=Windows 11
+2026-07-16 09:39:14 | INFO | M01 | shell=powershell
+2026-07-16 09:39:14 | INFO | M01 | cwd=notebooks
+2026-07-16 09:39:14 | INFO | M01 | github_actions=False
+2026-07-16 09:39:14 | INFO | M01 | Confirming installation:
+2026-07-16 09:39:14 | INFO | M01 |   python:       3.14.3
+2026-07-16 09:39:14 | INFO | M01 |   pandas:       3.0.3
+2026-07-16 09:39:14 | INFO | M01 |   numpy:        2.5.1
+2026-07-16 09:39:14 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-16 09:39:14 | INFO | M01 |   seaborn:      0.13.2
+2026-07-16 09:39:14 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-16 09:39:14 | INFO | M01 | Loaded dataset titanic
+2026-07-16 09:39:14 | INFO | M01 | Loading dataset: titanic
+2026-07-16 09:39:14 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-16 09:39:14 | INFO | M01 | Instances (rows): 891
+2026-07-16 09:39:14 | INFO | M01 | Features (columns): 15
+2026-07-16 09:39:14 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-16 09:39:14 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:39:14 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-16 09:39:14 | INFO | M01 | Missing values across all columns: 869
+2026-07-16 09:39:14 | DEBUG | M01 |    survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-16 09:39:16 | INFO | M01 | Median age substituted in for missing values
+2026-07-16 09:39:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:39:16 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-16 09:39:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:39:16 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-16 09:39:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 09:39:16 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age              0
+sibsp            0
+parch            0
+fare             0
+embarked         0
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      0
+alive            0
+alone            0
+dtype: int64
+2026-07-16 09:39:16 | INFO | M01 | ========================
+2026-07-16 09:39:16 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 09:39:16 | INFO | M01 | ========================
+2026-07-16 09:39:16 | INFO | M01 | Dataset:           titanic
+2026-07-16 09:39:16 | INFO | M01 | Instances:         891
+2026-07-16 09:39:16 | INFO | M01 | Candidate target:  survived
+2026-07-16 09:39:16 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 09:39:16 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:39:16 | INFO | M01 | ========================
+2026-07-16 09:39:41 | INFO | M01 | ========================
+2026-07-16 09:39:41 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 09:39:41 | INFO | M01 | ========================
+2026-07-16 09:39:41 | INFO | M01 | Dataset:           titanic
+2026-07-16 09:39:41 | INFO | M01 | Instances:         891
+2026-07-16 09:39:41 | INFO | M01 | Candidate target:  survived
+2026-07-16 09:39:41 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 09:39:41 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:39:41 | INFO | M01 | ========================
+2026-07-16 09:40:38 | INFO | M01 | ========================
+2026-07-16 09:40:38 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 09:40:38 | INFO | M01 | ========================
+2026-07-16 09:40:38 | INFO | M01 | Dataset:           titanic
+2026-07-16 09:40:38 | INFO | M01 | Instances:         891
+2026-07-16 09:40:38 | INFO | M01 | Candidate target:  survived
+2026-07-16 09:40:38 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 09:40:38 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 09:40:38 | INFO | M01 | ========================
+2026-07-16 10:11:30 | INFO | M01 | ========================
+2026-07-16 10:11:30 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 10:11:30 | INFO | M01 | ========================
+2026-07-16 10:11:30 | INFO | M01 | Dataset:           titanic
+2026-07-16 10:11:30 | INFO | M01 | Instances:         891
+2026-07-16 10:11:30 | INFO | M01 | Candidate target:  survived
+2026-07-16 10:11:30 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 10:11:30 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 10:11:30 | INFO | M01 | ========================
+2026-07-16 10:30:25 | INFO | M01 | Median age substituted in for missing values
+2026-07-16 10:30:25 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:30:25 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-16 10:30:25 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:30:25 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-16 10:30:25 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:30:25 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age              0
+sibsp            0
+parch            0
+fare             0
+embarked         0
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      0
+alive            0
+alone            0
+family_size      0
+dtype: int64
+2026-07-16 10:30:25 | INFO | M01 | ========================
+2026-07-16 10:30:25 | INFO | M01 | SUMMARY OF KEY FACTS
+2026-07-16 10:30:25 | INFO | M01 | ========================
+2026-07-16 10:30:25 | INFO | M01 | Dataset:           titanic
+2026-07-16 10:30:25 | INFO | M01 | Instances:         891
+2026-07-16 10:30:25 | INFO | M01 | Candidate target:  survived
+2026-07-16 10:30:25 | INFO | M01 | Problem type:      regression (we want to predict a number)
+2026-07-16 10:30:25 | INFO | M01 | Candidate features: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 10:30:25 | INFO | M01 | ========================
+2026-07-16 10:31:14 | INFO | M01 | === RUN START ===
+2026-07-16 10:31:14 | INFO | M01 | project=M01
+2026-07-16 10:31:14 | INFO | M01 | repo_dir=ml-02-features
+2026-07-16 10:31:14 | INFO | M01 | python=3.14.3
+2026-07-16 10:31:14 | INFO | M01 | os=Windows 11
+2026-07-16 10:31:14 | INFO | M01 | shell=powershell
+2026-07-16 10:31:14 | INFO | M01 | cwd=notebooks
+2026-07-16 10:31:14 | INFO | M01 | github_actions=False
+2026-07-16 10:31:14 | INFO | M01 | Confirming installation:
+2026-07-16 10:31:14 | INFO | M01 |   python:       3.14.3
+2026-07-16 10:31:14 | INFO | M01 |   pandas:       3.0.3
+2026-07-16 10:31:14 | INFO | M01 |   numpy:        2.5.1
+2026-07-16 10:31:14 | INFO | M01 |   scikit-learn: 1.9.0
+2026-07-16 10:31:14 | INFO | M01 |   seaborn:      0.13.2
+2026-07-16 10:31:14 | INFO | M01 |   matplotlib:   3.11.0
+2026-07-16 10:31:14 | INFO | M01 | Loaded dataset titanic
+2026-07-16 10:31:14 | INFO | M01 | Loading dataset: titanic
+2026-07-16 10:31:14 | INFO | M01 | Loaded: 891 rows (instances), 15 columns (features)
+2026-07-16 10:31:14 | INFO | M01 | Instances (rows): 891
+2026-07-16 10:31:14 | INFO | M01 | Features (columns): 15
+2026-07-16 10:31:14 | INFO | M01 | Numeric columns (regression target / numeric feature): ['survived', 'pclass', 'age', 'sibsp', 'parch', 'fare']
+2026-07-16 10:31:14 | INFO | M01 | Categorical columns (classification target / category): ['sex', 'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town', 'alive', 'alone']
+2026-07-16 10:31:14 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+2026-07-16 10:31:14 | INFO | M01 | Missing values across all columns: 869
+2026-07-16 10:31:14 | DEBUG | M01 |    survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  \
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no   
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes   
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes   
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   
+
+   alone  
+0  False  
+1  False  
+2   True  
+3  False  
+4   True  
+2026-07-16 10:31:16 | INFO | M01 | Median age substituted in for missing values
+2026-07-16 10:31:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:31:16 | INFO | M01 | Missing towns were filled with the most popular, Southampton
+2026-07-16 10:31:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:31:16 | INFO | M01 | Missing towns were filled with the most popular, S for Southampton
+2026-07-16 10:31:16 | INFO | M01 | Number of missing values in column:0
+2026-07-16 10:31:16 | INFO | M01 | Missing values by column:
+survived         0
+pclass           0
+sex              0
+age              0
+sibsp            0
+parch            0
+fare             0
+embarked         0
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      0
+alive            0
+alone            0
+dtype: int64
